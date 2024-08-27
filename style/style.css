@@ -14,8 +14,13 @@
     --color-borde: #000000;
     --color-desencriptar: #7D8ABC;
     --color-muñeco: #e4d4e2;
-
     --fuente-Inter: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: var(--fuente-Inter);
 }
 
 main {
@@ -24,50 +29,47 @@ main {
     font-family: var(--fuente-Inter);
     margin-left: 80px;
 }
-body{
-    margin-left: 2px;
-    height: 50vh;
-    margin: 0%;
-}
 
-.header{
+.header {
     padding-top: 2%;
 }
 
-.texto{
+.texto {
     color: var(--color-texto);
-    font-family: var(--fuente-Inter);
     font-size: 2rem; /* 32px */
     font-weight: 400;
     line-height: 20px;
     border: none;
-    padding: 80px 0% 0% 0%;
+    padding: 80px 0 0 0;
     resize: none;
 }
-::placeholder{ color: var(--color-texto);}
-.texto:focus{
+
+::placeholder {
+    color: var(--color-texto);
+}
+
+.texto:focus {
     outline: none;
 }
-.mensaje{
-    background-image: url(/assets/muñeco.png);
+
+.mensaje {
+    background-image: url('./assets/muñeco.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-color:  var(--color-muñeco);
-    font-family: var(--fuente-Inter);
+    background-size: contain;
+    background-color: var(--color-muñeco);
     font-size: 2rem; /* 32px */
     font-weight: 400;
     line-height: 20px;
     height: 750px;
     border: none;
-    border-radius:32px;
+    border-radius: 32px;
     margin-left: 350px;
     margin-top: 20px;
-    padding-left: 20px;
-    position: center;
-    resize: none;
     padding: 20px;
 }
-.mensaje:focus{
+
+.mensaje:focus {
     outline: none;
 }
 
@@ -80,7 +82,9 @@ body{
     gap: 24px;
 }
 
-.botones__encriptar, .botones__desencriptar {
+.botones__encriptar,
+.botones__desencriptar,
+.botones__copiar {
     width: 328px;
     text-decoration: none;
     text-align: center;
@@ -88,32 +92,18 @@ body{
     border: 2px solid var(--color-borde);
     padding: 24px;
     border-radius: 24px;
-
-}
-
-.botones__encriptar,.botones__desencriptar,.boton__copiar{
     background-color: var(--color-texto);
     color: var(--color-encriptar);
 }
 
-
-.botones__copiar{
-    width: 328px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-    background-color: var(--color-texto);
-    color: var(--color-encriptar);
-    border: 2px solid var(--color-borde);
-    padding: 24px;
-    border-radius: 24px;
+.botones__copiar {
     cursor: pointer;
     position: absolute;
     margin-left: 450px;
     margin-top: -90px;
 }
 
-.instruciones{
+.instruciones {
     color: var(--color-desencriptar);
     font-size: 0.75rem; /* 12px */
     padding: 1.5px;
@@ -126,49 +116,43 @@ body{
     margin-top: 35px;
     font-size: 1.5rem; /* 24px */
     font-weight: 400;
-    
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     main {
         flex-direction: column;
-        margin-left: 3%;
-        margin-right: 3%;
+        margin-left: 0;
     }
 
     .mensaje {
-        margin-left: 4%;
-        width: 90%;
+        margin-left: 0;
+        width: 100%;
         font-size: 1.5rem; /* 24px */
-        height: 23vh;
+        height: auto;
     }
+
     .botones {
         flex-direction: column;
         gap: 16px;
     }
 
     .botones__encriptar,
-    .botones__desencriptar
-    {
-        width: 85%;
+    .botones__desencriptar,
+    .botones__copiar {
+        width: 100%;
     }
 
     .botones__copiar {
-        width: 80%;
-        margin-left: 7%;
-        margin-right: 3%;
+        margin-left: 0;
         margin-top: 10px;
     }
 
     .texto {
         font-size: 1.5rem; /* 24px */
-        width: 40%;
-        height: 35vh;
     }
 
     .footer {
         font-size: 1.25rem; /* 20px */
-        position: relative;
-        margin-top: 15%;
+        margin-top: 10%;
     }
 }
