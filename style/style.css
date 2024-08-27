@@ -128,3 +128,49 @@ body{
     font-weight: 400;
     
 }
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .mensaje {
+        margin-left: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .botones__encriptar,
+    .botones__desencriptar,
+    .botones__copiar {
+        width: 100%;
+        max-width: none;
+    }
+
+    .botones__copiar {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .texto {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .mensaje {
+        font-size: 1.5rem; /* 24px */
+        height: auto;
+    }
+
+
+    .footer {
+        font-size: 1.25rem; /* 20px */
+        position: relative;
+        margin-top: 10%;
+    }
+}
