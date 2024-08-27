@@ -129,48 +129,46 @@ body{
     
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
     main {
         flex-direction: column;
-        margin-left: 0;
+        margin-left: 3%;
+        margin-right: 3%;
     }
 
     .mensaje {
-        margin-left: 0;
-        width: 100%;
-        max-width: none;
+        margin-left: 4%;
+        width: 90%;
+        font-size: 1.5rem; /* 24px */
+        height: 23vh;
     }
-
     .botones {
         flex-direction: column;
         gap: 16px;
     }
 
     .botones__encriptar,
-    .botones__desencriptar,
-    .botones__copiar {
-        width: 100%;
-        max-width: none;
+    .botones__desencriptar
+    {
+        width: 85%;
     }
 
     .botones__copiar {
-        margin-left: 0;
+        width: 80%;
+        margin-left: 7%;
+        margin-right: 3%;
         margin-top: 10px;
     }
 
     .texto {
         font-size: 1.5rem; /* 24px */
+        width: 40%;
+        height: 35vh;
     }
-
-    .mensaje {
-        font-size: 1.5rem; /* 24px */
-        height: auto;
-    }
-
 
     .footer {
         font-size: 1.25rem; /* 20px */
         position: relative;
-        margin-top: 10%;
+        margin-top: 15%;
     }
 }
